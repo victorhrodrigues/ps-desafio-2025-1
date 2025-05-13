@@ -22,16 +22,16 @@ class Category extends Model
     {
         return $this->hasMany(Vehicle::class, 'category_id', 'id');
     }
-
-    protected static function booted()
-    {
-        self::deleting(function(Category $category)
-        {
-            $category->vehicles()->each(function(Vehicle $vehicle)
-            {
-                $vehicle->delete();
-            });
+    
+    // protected static function booted()
+    // {
+    //     self::deleting(function(Category $category)
+    //     {
+    //         $category->vehicles()->each(function(Vehicle $vehicle)
+    //         {
+    //             $vehicle->delete();
+    //         });
                 
-        });
-    }
+    //     });
+    // }
 }

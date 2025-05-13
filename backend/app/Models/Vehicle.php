@@ -28,7 +28,7 @@ class Vehicle extends Model
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 
-    protected static function booted()
+    protected static function booted(): void
     {
         self::deleted(function(Vehicle $vehicle)
         {
