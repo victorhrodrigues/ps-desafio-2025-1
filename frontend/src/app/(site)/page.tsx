@@ -6,7 +6,7 @@ import { vehicleType } from "@/types/vehicle"
 import { useEffect, useState } from "react"
 import style from "./style.module.css"
 import Card from "@/components/site_PS/card/card"
-
+import "../../style/variables.css"
 
 export default function Home() {
   const [vehicles, setVehicles] = useState<vehicleType[] | undefined>()
@@ -29,9 +29,13 @@ export default function Home() {
   return (
   <>
     <div className={style.page}>
-      {vehicles?.map((vehicle: vehicleType, index: number) => (
-        <Card vehicle={vehicle} key={index}/>
-      ))}
+      {/* Navbar */}
+      <div className={style.wrapper}>
+        {vehicles?.map((vehicle: vehicleType, index: number) => (
+          <Card vehicle={vehicle} key={index}/>
+        ))}
+      </div>
+      {/* Footer */}
     </div>
   </>)
 }
