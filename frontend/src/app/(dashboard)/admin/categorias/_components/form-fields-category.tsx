@@ -38,6 +38,15 @@ export default function FormFieldsCategory({
           <Label htmlFor='name' required={!category}>
             Categoria
           </Label>
+          <Input
+            name = "name"
+            id = "name"
+            placeholder = "Insira a categoria"
+            defaultValue = {category?.name}
+            disabled = {pending}
+            readOnly = {readOnly}
+            error = {error?.errors?.name}
+          />
         </FormField>
       </FormFieldsGroup>
       <DialogFooter className={cn({ hidden: readOnly })}>

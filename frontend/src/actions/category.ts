@@ -22,7 +22,7 @@ export async function updateCategory(form: FormData) {
 }
 
 export async function destroyCategory(id: string) {
-    const res = await api('DELETE', `/categories/${('id')}`)
+    const res = await api('DELETE', `/categories/${id}`)
 
     if (!res.error) {
         revalidatePath('/admin/categorias')

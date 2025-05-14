@@ -11,6 +11,7 @@ import {
   SidebarHeaderLogo,
   UserDropdown,
 } from '@/components/dashboard/sidebar'
+import { GiCarKey } from "react-icons/gi"
 import { LuBookOpen, LuHome, LuLayers, LuLogOut, LuUsers } from 'react-icons/lu'
 import { DropdownMenuItem } from '@/components/dropdown-menu'
 import { signOut, useSession } from 'next-auth/react'
@@ -36,7 +37,7 @@ export function SidebarMain() {
           <SidebarNavLinkLabel>Usuários</SidebarNavLinkLabel>
         </SidebarNavLink>
         <SidebarNavLink href="/admin/veiculos">
-          <LuBookOpen />
+          <GiCarKey />
           <SidebarNavLinkLabel>Veiculos</SidebarNavLinkLabel>
         </SidebarNavLink>
         <SidebarNavLink href="/admin/categorias">

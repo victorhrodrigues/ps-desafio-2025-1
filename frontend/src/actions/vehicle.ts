@@ -22,7 +22,7 @@ export async function updateVehicle(form: FormData) {
 }
 
 export async function destroyVehicle(id: string) {
-    const res = await api('DELETE', `/vehicles/${('id')}`)
+    const res = await api('DELETE', `/vehicles/${id}`)
 
     if (!res.error) {
         revalidatePath('/admin/veiculos')
