@@ -1,7 +1,7 @@
 'use client'
 import { vehicleType } from "@/types/vehicle"
 import style from "./style.module.css"
-import "../../../style/variables.css"
+import "../../../../public/styles/variables.css"
 
 
 interface vehicleProp {
