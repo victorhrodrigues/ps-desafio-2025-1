@@ -18,7 +18,7 @@
     margin: 2rem;
     display: grid;
     gap: 1.2rem;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 18rem));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 20rem));
     justify-content: center;
     transition: all 0.5% ease;
 }

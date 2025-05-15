@@ -8,6 +8,8 @@ import style from "./style.module.css"
 import Card from "@/components/site_PS/card/card"
 import "../../../public/styles/variables.css"
 import Navbar from "@/components/site_PS/navbar/navbar"
+import Footer from "@/components/site_PS/footer/footer"
+
 
 
 export default function Home() {
@@ -31,14 +33,17 @@ export default function Home() {
   return (
   <>
     <div className={style.page}>
+      
+      <Navbar logo="./images/LogoOffWhite.svg"/>
+      
       <h1 className={style.title}>Veículos</h1>
-      <Navbar logo="./images/Logotipo de Carros Usados.png"/>
       <div className={style.wrapper}>
         {vehicles?.map((vehicle: vehicleType, index: number) => (
           <Card vehicle={vehicle} key={index}/>
         ))}
       </div>
-      {/* Footer */}
+      
+      <Footer/>
     </div>
   </>)
 }

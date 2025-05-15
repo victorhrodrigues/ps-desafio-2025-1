@@ -38,10 +38,15 @@
     padding-bottom: 5px;
 }
 
-.car_name,
+.card_name,
 .card_content {
     line-height: 100%;
     margin: 1vh 0;
+}
+
+.card_button:disabled {
+
+    color: var(--highlighted-red);
 }
 
 @media screen and (max-width: 660px) {

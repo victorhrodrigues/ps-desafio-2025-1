@@ -30,3 +30,12 @@ export async function destroyVehicle(id: string) {
     return JSON.stringify(res)
 
 }
+
+export async function decrementVehicle(id: string) {
+    const res = await api('POST', `/vehicles/${id}`)
+
+    if (!res.error) {
+        revalidatePath('/veiculos')
+    }
+    return JSON.stringify(res)
+}

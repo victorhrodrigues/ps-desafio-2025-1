@@ -29,6 +29,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show']);
 
 Route::get('/vehicles', [VehicleController::class, 'index']);
 Route::get('/vehicles/{id}', [VehicleController::class, 'show']);
+Route::post('/vehicles/{id}', [VehicleController::class, 'decrement']);
 
 
 
