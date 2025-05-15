@@ -19,7 +19,8 @@ export default function Page() {
           const {response} = await api<vehicleType[]>('GET', `/vehicles`)
     
           if (response) {
-            setVehicles(response)
+            const filteredVehicles = response.filter(vehicle => vehicle.quantity_in_stock > 0)
+            setVehicles(filteredVehicles)
           }else{
             toast({
               title: "Veículos não encontrados",
@@ -42,14 +43,14 @@ export default function Page() {
                 <h1>Carros em Destaque</h1>
                 <Swiper
                     spaceBetween={50}
-                    slidesPerView={3}
+                    slidesPerView={1}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                     breakpoints={
                         {
                             1024: { slidesPerView: 3 },
                             768: { slidesPerView: 2 },
-                            480: { slidesPerView: 1 },
+                            480: { slidesPerView: 1  },
                         }
                     }
                 >
