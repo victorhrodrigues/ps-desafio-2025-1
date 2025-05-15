@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Validation\Rule;
 class StoreVehicleRequest extends FormRequest
 {
     /**
@@ -29,5 +29,20 @@ class StoreVehicleRequest extends FormRequest
             'category_id'=>['required'],
             'quantity_in_stock'=>['required', 'integer']
         ];
+    }
+
+    public function withValidator($validator)
+    {
+        $validator->after(function ($validator) {
+            $exists = \App\Models\Vehicle::where('name', $this->name)
+                ->where('brand', $this->brand)
+                ->where('year_of_manufacture', $this->year_of_manufacture)
+                ->where('category_id', $this->category_id)
+                ->exists();
+
+            if ($exists) {
+                $validator->errors()->add('name', 'Já existe um veículo com esses dados.');
+            }
+        });
     }
 }
