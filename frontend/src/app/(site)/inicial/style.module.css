@@ -4,13 +4,14 @@
     align-items: center;
     padding: 4rem;
     background-color: var(--background-color);
+    max-width: 100%;
 }
 
 .content {
-    max-width: 500px;
+    max-width: 31.25rem;
 }
 
-.logo {
+.content_logo {
     width: 150px;
     margin-bottom: 2rem;
 }
@@ -46,4 +47,49 @@
     transition: var(--highlighted-blue) 0.3s;
 }
 
-.carousel {}
+.carousel {
+    max-width: 50vw;
+}
+
+.carousel h1 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 1rem;
+    color: var(--highlighted-red);
+    text-align: center;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 660px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .content {
+        max-width: 100%;
+
+        flex-direction: column;
+        justify-content: center;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .content_logo {
+        width: 100%;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+}

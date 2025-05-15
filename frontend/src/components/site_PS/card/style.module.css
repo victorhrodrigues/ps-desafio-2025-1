@@ -1,9 +1,9 @@
 .card {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    height: fit-content;
     min-height: 24rem;
-    min-width: 16rem;
+    width: 100%;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -52,10 +52,11 @@
 @media screen and (max-width: 660px) {
     .card {
         flex-direction: row;
-        width: 90vw;
+        width: 100%;
         height: fit-content;
         max-height: 160px;
         min-height: 100px;
+        margin-bottom: 5rem;
     }
 
     .card_image {
@@ -66,24 +67,26 @@
 
     .card_body {
         border-radius: 0 10px 10px 0;
-        max-height: none;
+        max-height: auto;
     }
 
-    .car_name {
-        font-size: 25px;
+    .card_name {
+        font-size: 16px;
     }
 
     .card_content {
-        font-size: 15px;
+        font-size: 10px;
     }
 }
 
 @media screen and (max-width: 400px) {
     .card_content {
-        font-size: 13px;
+        font-size: 0.625rem;
     }
 
     .card_name {
-        font-size: 20px;
+        font-size: 1rem;
     }
+
+    .card_button {}
 }

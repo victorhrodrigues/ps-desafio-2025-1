@@ -52,8 +52,8 @@ export default function Card({vehicle}: vehicleProp){
                 <p className={style.card_content}>Categoria: {vehicle.category.name}</p>
                 <p className={style.card_content}>Ano de fabricação: {vehicle.year_of_manufacture}</p>
                 <p className={style.card_content}>Quantidade: {compra}</p>
-                <button className={style.card_button} onClick={submit} disabled={isDisabled}>{isDisabled?"Esgotado":"Comprar"}</button>
             </div>
+            <button className={style.card_button} onClick={submit} disabled={isDisabled}>{isDisabled?"Esgotado":"Comprar"}</button>
         </div>
     )
 }
