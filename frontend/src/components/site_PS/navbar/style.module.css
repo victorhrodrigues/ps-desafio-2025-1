@@ -37,6 +37,11 @@
     font-family: var(--font-primary);
 }
 
+.nav_item:hover>button {
+    color: var(--highlighted-red);
+    transition: 0.5s;
+}
+
 .nav_item:hover>a {
     color: var(--highlighted-red);
     transition: 0.5s;

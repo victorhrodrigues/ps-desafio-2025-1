@@ -27,7 +27,7 @@ export default function Footer(){
 
             <ul className={style.list}>
                 <li>
-                    <h3>Nossa empresa</h3>
+                    <h2>Nossa empresa</h2>
                 </li>
                 <li>
                     <a href="#" className={style.sobre_link}>
@@ -43,7 +43,7 @@ export default function Footer(){
 
             <ul className={style.list}>
                 <li>
-                    <h3>Parcerias</h3>
+                    <h2>Parcerias</h2>
                 </li>
                 <li>
                     <a href="#" className={style.sobre_link}>

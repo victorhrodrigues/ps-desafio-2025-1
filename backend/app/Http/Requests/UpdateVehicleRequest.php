@@ -30,19 +30,4 @@ class UpdateVehicleRequest extends FormRequest
             'quantity_in_stock'=>['sometimes', 'integer']
         ];
     }
-
-    public function withValidator($validator)
-    {
-        $validator->after(function ($validator) {
-            $exists = \App\Models\Vehicle::where('name', $this->name)
-                ->where('brand', $this->brand)
-                ->where('year_of_manufacture', $this->year_of_manufacture)
-                ->where('category_id', $this->category_id)
-                ->exists();
-
-            if ($exists) {
-                $validator->errors()->add('name', 'Não foi possível editar, já existe um veículo com esses dados.');
-            }
-        });
-    }
 }

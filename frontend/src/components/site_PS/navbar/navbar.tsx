@@ -40,13 +40,10 @@ export default function Navbar({logo}:navBarProps){
 
                 <ul className={style.nav_links}>
                     <li className={style.nav_item}>
-                        <a href="#">Início</a>
+                        <a href="/inicial">Início</a>
                     </li>
                     <li className={style.nav_item}>
-                        <a href="#">Veículos</a>
-                    </li>
-                    <li className={style.nav_item}>
-                        <a href="#">Categorias</a>
+                        <a href="/veiculos">Veículos</a>
                     </li>
                     <li className={style.nav_item}>
                         <a href="/admin" className={style.icon_button}>

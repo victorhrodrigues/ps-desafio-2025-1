@@ -1,0 +1,49 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--background-color);
+}
+
+.content {
+    max-width: 500px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 2rem;
+}
+
+.content_title {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0 1rem;
+    color: var(--font-primary);
+}
+
+.content_text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--font-primary);
+    font-family: var(--font-text);
+}
+
+.content_text strong {
+    color: var(--highlighted-red)
+}
+
+.content_button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--highlighted-blue);
+    color: var(--background);
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: var(--highlighted-blue) 0.3s;
+}
+
+.carousel {}
